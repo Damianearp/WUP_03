@@ -28,6 +28,8 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 basicCN + geom_boxplot()
 ```
   
+  judging by the graph shown above, it appears that of the three places people chose to sit, the back seat has the most alcohol consumed compared to the frond and middle seats. probably to not get caught.
+  
   
 ### get fancy  
 
@@ -36,6 +38,9 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 ```
 
 ## Numerical Summarys 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
 
 ## Inferential Tests
 
