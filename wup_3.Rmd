@@ -37,13 +37,14 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
-The second graph seems to have the box go inwards until it reaches the median of the back, front, and middle seats. The back having a median of about 4, the front on the 0, and middle about 1 maybe 2.
+The second graph seems to have the box go inwards until it reaches the median of the back, front, and middle seats. The back having a median of about 4, the front on the 0, and middle about 1 maybe 2.  
 
 ## Numerical Summarys 
 ```{r}
 favstats(alcohol~Seat,data=davisdata)
 ```
-This numerical summary shows that the back row have 32 people and the front row has 33, while the Middle row had more then double! The back row's First quarter (Q1) being just under 1 at .75. As we look at the mean, we can see that comparing the Middle row with the back, the back row has roughly triple the consumption compared to the middle row.
+This numerical summary shows that the back row have 32 people and the front row has 33, while the Middle row had more then double! The back row's First quarter (Q1) being just under 1 at .75. As we look at the mean, we can see that comparing the Middle row with the back, the back row has roughly triple the consumption compared to the middle row.  
+
 ## Inferential Tests
 ```{r}
 model1 <- aov(alcohol~Seat,data=davisdata)
