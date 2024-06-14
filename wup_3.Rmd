@@ -43,8 +43,15 @@ The second graph seems to have the box go inwards until it reaches the median of
 ```{r}
 favstats(alcohol~Seat,data=davisdata)
 ```
-This numerical summary shows that Q1, both the front and middle are at 0; The back row's First quarter (Q1) being just under 1 at .75. As we look at the mean, we can see that comparing the Middle row with the back, the back row has roughly triple compared to the middle 
+This numerical summary shows that the back row have 32 people and the front row has 33, while the Middle row had more then double! The back row's First quarter (Q1) being just under 1 at .75. As we look at the mean, we can see that comparing the Middle row with the back, the back row has roughly triple the consumption compared to the middle row.
 ## Inferential Tests
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+As seen in the Inferential test, the probability is 0.000116, which is extremely low, so we reject the null hypnosis! 
+
 
 ## Conclusions
 
