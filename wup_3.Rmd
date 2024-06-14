@@ -52,7 +52,15 @@ summary.aov(model1)
 
 As seen in the Inferential test, the probability is 0.000116, which is extremely low, so we reject the null hypnosis! 
 
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 8.7, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
+
+Looking at this graph we can see both the front-back and middle back are quite similar in size and position as they are in the negative zone of the plot, while the middle-front is much higher passing 0. This shows from these three positions that the people in the back row consume more alcohol then the people closer to the front.
 
 ## Conclusions
 
+After looking at the data given to me, I can conclude that the people in the back row are more likely to consume alcohol and it decreases the consumption rate as we look further to the middle row and even seeing little to none in the front row! So is there a differnce in consumption depending on where you sit? Yes there is.
 
